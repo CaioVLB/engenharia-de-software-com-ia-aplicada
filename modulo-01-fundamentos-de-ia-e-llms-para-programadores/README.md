@@ -2,7 +2,7 @@
 
 ## O que esta disciplina cobre
 
-Base conceitual e prática para quem vem do desenvolvimento de software e quer entender IA sem depender de matemática avançada:
+Ponto de partida da pós: entender como LLMs funcionam por dentro e sair do zero até minha primeira rede neural funcional, aplicando os conceitos direto em JavaScript.
 
 - Contexto histórico da IA e a linha do tempo até chegar em LLMs
 - Diferenças entre Machine Learning, Deep Learning e Inteligência Artificial
