@@ -20,7 +20,7 @@ Ponto de partida da pós: entender como LLMs funcionam por dentro e sair do zero
 
 | Projeto | Descrição | Stack |
 |---|---|---|
-| [primeira-rede-neural](./primeira-rede-neural/) | Rede neural para prever categoria de um usuário (Premium/Medium/Basic) a partir de idade, cor favorita e localização | TensorFlow.js, Node.js |
+| [primeira-rede-neural](./primeira-rede-neural/v1-console/) | Rede neural para prever categoria de um usuário (Premium/Medium/Basic) a partir de idade, cor favorita e localização | TensorFlow.js, Node.js |
 
 
 ## Principais aprendizados

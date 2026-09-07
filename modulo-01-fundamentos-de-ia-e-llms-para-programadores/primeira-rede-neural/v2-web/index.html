@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Perfil — Rede Neural no Navegador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <main class="page">
+
+      <header class="hero">
+        <p class="eyebrow">Rede neural · rodando 100% no seu navegador</p>
+        <h1>Qual categoria essa pessoa pertence?</h1>
+        <p class="hero-sub">
+          Um classificador treinado do zero com TensorFlow.js — sem servidor, sem backend.
+          O treino roda agora mesmo, na sua máquina, e leva menos de um segundo.
+        </p>
+      </header>
+
+      <section class="terminal" id="terminal" aria-live="polite">
+        <div class="terminal-head">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="terminal-title">treino.log</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line" id="terminal-status">inicializando modelo…</p>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="classifier" id="classifier" hidden>
+
+        <div class="panel selector-panel">
+          <h2>Escolha um perfil</h2>
+          <p class="panel-hint">Estas pessoas não fizeram parte do treino — o modelo nunca as viu.</p>
+
+          <label class="field-label" for="record-select">Perfil</label>
+          <select id="record-select" class="select"></select>
+
+          <dl class="record-details" id="record-details"></dl>
+
+          <button id="classify-btn" class="btn-primary" type="button">
+            Classificar perfil
+          </button>
+        </div>
+
+        <div class="panel result-panel">
+          <div class="card" id="result-card" data-state="empty">
+            <div class="card-empty" id="card-empty">
+              <p>O resultado aparece aqui</p>
+            </div>
+
+            <div class="card-content" id="card-content" hidden>
+              <p class="card-eyebrow">Categoria prevista</p>
+              <p class="card-tier" id="card-tier">—</p>
+              <p class="card-confidence" id="card-confidence"></p>
+
+              <div class="bars" id="bars"></div>
+            </div>
+
+            <div class="card-perforation" aria-hidden="true"></div>
+          </div>
+        </div>
+
+      </section>
+
+      <footer class="footer">
+        <p>Disciplina 01 — Fundamentos de IA e LLMs para Programadores · v2 (browser, TensorFlow.js)</p>
+      </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

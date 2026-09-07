@@ -112,14 +112,14 @@ const tensorLabels = [
 const inputXs = tf.tensor2d(tensorPessoasNormalizado)
 const outputYs = tf.tensor2d(tensorLabels)
 
-// quanto mais dados melhor!
+// quanto mais dados de qualidade e representativos, melhor!
 // assim o algoritmo consegue entender melhor os padrões complexos dos dados
 const model = await trainModel(inputXs, outputYs)
 
 const pessoa = { nome: 'zé', idade: 28, cor: 'verde', localizacao: 'Curitiba' }
 
 // normalizando a idade da nova pessoa usando o mesmo padrão do treino
-// Exemplo: idade_min = 25, idade_max = 40, então (28 - 25) / (40 - 25) = 0.2
+// Exemplo: idade da nova pessoa, idade_min = 25, idade_max = 40, então (28 - 25) / (40 - 25) = 0.2
 
 // Tem que ser um array de arrays, onde cada posição equivale a uma pessa
 const pessoaTensorNormalizado = [

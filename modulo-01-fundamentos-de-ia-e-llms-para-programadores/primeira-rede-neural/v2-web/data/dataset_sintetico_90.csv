@@ -1,0 +1,91 @@
+﻿nome,idade,cor,localizacao
+Erick,25,verde,Curitiba
+Ana,26,vermelho,Curitiba
+Carlos,27,verde,Rio
+Beatriz,28,verde,Curitiba
+Lucas,29,verde,São Paulo
+Mariana,30,vermelho,Curitiba
+Rafael,31,verde,Rio
+Juliana,33,verde,Rio
+Gabriel,34,verde,Curitiba
+Larissa,35,verde,Curitiba
+Felipe,25,azul,São Paulo
+Camila,26,azul,Rio
+João,30,azul,Curitiba
+Amanda,30,vermelho,Rio
+Pedro,31,verde,São Paulo
+Bianca,34,vermelho,Curitiba
+Matheus,35,vermelho,Rio
+Isabela,37,verde,Curitiba
+Thiago,39,verde,Curitiba
+Letícia,30,azul,Curitiba
+Daniel,28,azul,São Paulo
+Sofia,30,azul,São Paulo
+Gustavo,32,azul,Rio
+Helena,36,azul,Curitiba
+Vinícius,36,vermelho,São Paulo
+Laura,38,vermelho,Rio
+André,40,vermelho,Curitiba
+Valentina,36,verde,São Paulo
+Henrique,40,verde,Rio
+Manuela,40,vermelho,São Paulo
+Paulo,25,azul,Rio
+Aline,25,verde,São Paulo
+Diego,25,vermelho,Rio
+Carolina,25,vermelho,São Paulo
+Renato,26,azul,Curitiba
+Priscila,26,verde,Curitiba
+Eduardo,26,verde,Rio
+Natália,27,azul,Curitiba
+Marcelo,27,verde,São Paulo
+Débora,27,vermelho,Rio
+Rodrigo,28,azul,Curitiba
+Patrícia,28,verde,São Paulo
+Bruno,28,vermelho,Rio
+Clara,29,verde,Curitiba
+Fábio,29,vermelho,Rio
+Renata,32,verde,Rio
+Leandro,32,vermelho,Curitiba
+Jéssica,33,verde,Curitiba
+Murilo,33,vermelho,Curitiba
+Tatiane,36,verde,Curitiba
+Caio,26,vermelho,São Paulo
+Fernanda,27,azul,São Paulo
+Victor,27,vermelho,São Paulo
+Luana,28,vermelho,São Paulo
+Ruan,29,azul,Rio
+Nicole,31,azul,Curitiba
+Samuel,31,azul,Rio
+Alice,31,vermelho,Rio
+Wesley,31,vermelho,São Paulo
+Yasmin,32,vermelho,Rio
+Igor,33,verde,São Paulo
+Bárbara,34,verde,Rio
+Danilo,35,azul,Curitiba
+Melissa,35,vermelho,Curitiba
+Cauã,36,verde,Rio
+Rebeca,37,verde,Rio
+Otávio,37,vermelho,Curitiba
+Lívia,38,verde,Curitiba
+Ramon,38,verde,Rio
+Cecília,39,vermelho,Curitiba
+Emerson,29,azul,São Paulo
+Giovana,32,azul,São Paulo
+Alex,33,azul,São Paulo
+Lorena,34,azul,Rio
+Breno,34,azul,São Paulo
+Esther,34,vermelho,São Paulo
+Robson,35,azul,Rio
+Mirela,35,vermelho,São Paulo
+César,36,azul,São Paulo
+Heloísa,37,azul,Curitiba
+Yuri,37,azul,São Paulo
+Elisa,37,vermelho,Rio
+Douglas,38,azul,São Paulo
+Joana,38,verde,São Paulo
+Cláudio,38,vermelho,São Paulo
+Nina,39,azul,Curitiba
+Elias,39,azul,Rio
+Maitê,39,verde,São Paulo
+Ivan,40,azul,Rio
+Sara,40,vermelho,Rio
