@@ -2,7 +2,7 @@
 
 > Classificador de perfis executado 100% no navegador com TensorFlow.js.
 
-**Demo do projeto:** [![Demo online](https://img.shields.io/badge/Demo-online-brightgreen)](https://rede-neural-v2.vercel.app/)
+**[Acessar a aplicação online →](https://rede-neural-v2.vercel.app/)**
 
 ## Sobre o projeto
 
