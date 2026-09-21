@@ -259,7 +259,7 @@ body {
 
 .card-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
@@ -282,6 +282,48 @@ body {
   color: var(--text-muted);
   font-size: 0.88rem;
   margin: 0 0 20px;
+}
+
+/* ---------- Comparação regra x IA ---------- */
+
+.rule-result {
+  margin-bottom: 18px;
+}
+
+.rule-info {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.rule-category {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.rule-score {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.ai-result {
+  margin-bottom: 4px;
+}
+
+.comparison-result {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin: 14px 0 20px;
+}
+
+.comparison-result[data-match="true"] {
+  color: var(--mint);
+}
+
+.comparison-result[data-match="false"] {
+  color: var(--text-muted);
 }
 
 .bars { display: flex; flex-direction: column; gap: 10px; }

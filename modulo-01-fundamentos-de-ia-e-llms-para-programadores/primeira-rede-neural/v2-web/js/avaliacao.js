@@ -1,12 +1,12 @@
 import {
-    prever
-} from '../app.js';
+  prever
+} from './modelo.js';
 
 // =========================================================================
 // AVALIAÇÃO — mede o desempenho do modelo em dados que ele não viu.
 // =========================================================================
 
-async function avaliarModelo(model, dados) {
+export async function avaliarModelo(model, dados) {
   let acertos = 0;
 
   const resultados = [];
@@ -48,7 +48,7 @@ async function avaliarModelo(model, dados) {
 // ANÁLISE DOS ERROS
 // =========================================================================
 
-function analisarErros(resultados) {
+export function analisarErros(resultados) {
   const erros = resultados.filter(
     (resultado) => !resultado.acertou
   );
@@ -76,7 +76,7 @@ function analisarErros(resultados) {
 // MATRIZ DE CONFUSÃO
 // =========================================================================
 
-function criarMatrizConfusao(resultados) {
+export function criarMatrizConfusao(resultados) {
   const matriz = {
     basic: {
       basic: 0,
@@ -107,7 +107,7 @@ function criarMatrizConfusao(resultados) {
   return matriz;
 }
 
-function exibirMatrizConfusao(matriz) {
+export function exibirMatrizConfusao(matriz) {
   console.table([
     {
       'Real \\ Prevista': 'Basic',
@@ -131,10 +131,3 @@ function exibirMatrizConfusao(matriz) {
     },
   ]);
 }
-
-export {
-  avaliarModelo,
-  analisarErros,
-  criarMatrizConfusao,
-  exibirMatrizConfusao,
-};

@@ -3,6 +3,40 @@
 // =========================================================================
 
 // -------------------------------------------------------------------------
+// CARREGAR O DATASET
+// -------------------------------------------------------------------------
+
+export async function carregarDataset(caminho) {
+  const response = await fetch(caminho);
+
+  if (!response.ok) {
+    throw new Error(
+      `Erro ao carregar dataset: ${response.status}`
+    );
+  }
+
+  const csv = await response.text();
+
+  const linhas = csv
+    .trim()
+    .split(/\r?\n/)
+    .map((linha) =>
+      linha.split(',').map((campo) => campo.trim())
+    );
+
+  const [, ...dados] = linhas;
+
+  return dados.map(
+    ([nome, idade, cor, localizacao]) => ({
+      nome,
+      idade: Number(idade),
+      cor,
+      localizacao,
+    })
+  );
+}
+
+// -------------------------------------------------------------------------
 // GERADOR PSEUDOALEATÓRIO COM SEED
 // -------------------------------------------------------------------------
 
@@ -40,42 +74,30 @@ function embaralharArray(array, seed) {
 // ESTRATIFICAÇÃO DO DATASET
 // -------------------------------------------------------------------------
 
-export function separarDataset(dados, proporcaoTreino, seed) {
+export function selecionarAmostraEstratificada(dados, quantidade, seed) {
   const grupos = {
     basic: [],
     medium: [],
     premium: [],
   };
 
-  // Separa os registros por categoria.
   dados.forEach((registro) => {
     grupos[registro.categoria].push(registro);
   });
 
-  // Embaralha cada categoria de maneira reproduzível.
   Object.keys(grupos).forEach((categoria, index) => {
-    grupos[categoria] = embaralharArray(
-      grupos[categoria],
-      seed + index
-    );
+    grupos[categoria] =
+      embaralharArray(
+        grupos[categoria],
+        seed + index
+      );
   });
 
-  const treino = [];
-  const teste = [];
+  const quantidadePorCategoria = quantidade / 3;
 
-  // Mantém a mesma proporção de treino/teste em cada classe.
-  Object.values(grupos).forEach((grupo) => {
-    const quantidadeTreino = Math.floor(
-      grupo.length * proporcaoTreino
-    );
-
-    treino.push(...grupo.slice(0, quantidadeTreino));
-    teste.push(...grupo.slice(quantidadeTreino));
-  });
-
-  // Embaralha os conjuntos finais.
-  return {
-    treino: embaralharArray(treino, seed + 100),
-    teste: embaralharArray(teste, seed + 200),
-  };
+  return [
+    ...grupos.basic.slice(0, quantidadePorCategoria),
+    ...grupos.medium.slice(0, quantidadePorCategoria),
+    ...grupos.premium.slice(0, quantidadePorCategoria),
+  ];
 }

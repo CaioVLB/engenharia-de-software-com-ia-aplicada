@@ -40,6 +40,7 @@
         <div class="panel selector-panel">
           <h2>Escolha um perfil</h2>
           <p class="panel-hint">Estas pessoas não fizeram parte do treino — o modelo nunca as viu.</p>
+          <p class="panel-hint">A categoria pela regra é usada apenas como referência para comparar com a previsão da rede.</p>
 
           <label class="field-label" for="record-select">Perfil</label>
           <select id="record-select" class="select"></select>
@@ -58,9 +59,24 @@
             </div>
 
             <div class="card-content" id="card-content" hidden>
-              <p class="card-eyebrow">Categoria prevista</p>
-              <p class="card-tier" id="card-tier">—</p>
-              <p class="card-confidence" id="card-confidence"></p>
+              <div class="rule-result">
+                <p class="card-eyebrow">Categoria esperada pela regra</p>
+
+                <div class="rule-info">
+                  <span class="rule-category" id="rule-category">—</span>
+                  <span aria-hidden="true">•</span>
+                  <span class="rule-score" id="rule-score">—</span>
+                </div>
+              </div>
+
+              <div class="ai-result">
+                <p class="card-eyebrow">Predição da rede neural</p>
+
+                <p class="card-tier" id="card-tier">—</p>
+                <p class="card-confidence" id="card-confidence"></p>
+              </div>
+
+              <p class="comparison-result" id="comparison-result"></p>
 
               <div class="bars" id="bars"></div>
             </div>

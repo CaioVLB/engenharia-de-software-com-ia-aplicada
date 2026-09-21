@@ -1,6 +1,6 @@
 import {
   determinarCategoria
-} from '../app.js';
+} from './regras.js';
 
 export function analisarDataset(dados) {
   const distribuicaoCategorias = {
