@@ -38,7 +38,7 @@ Além da implementação do modelo, o projeto busca investigar como a quantidade
 
 ## Interface
 
-![Interface do classificador](./assets/interface.png)
+![Interface do classificador](./v2-web/assets/interface.png)
 
 Após o treinamento, a aplicação disponibiliza alguns perfis que não fazem parte do conjunto de treinamento.
 
