@@ -208,12 +208,12 @@ Premium / Medium / Basic
 ### Configuração de treinamento
 
 | Parâmetro | Valor |
-|---|---|---|
+|---|---|
 | Optimizer | Adam |
 | Função de perda | categoricalCrossentropy
 | Métrica | Accuracy |
 | Épocas | 100 |
-| Shuffle | true |
+| Shuffle | true 
 
 A saída utiliza `softmax`, produzindo uma probabilidade para cada uma das três categorias.
 
