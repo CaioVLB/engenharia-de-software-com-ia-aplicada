@@ -2,6 +2,8 @@
 
 > Classificador de perfis executado 100% no navegador com TensorFlow.js.
 
+[![Acessar demo](https://img.shields.io/badge/Demo-online-brightgreen)](https://rede-neural-v2.vercel.app/)
+
 ## Sobre o projeto
 
 Aplicação de classificação supervisionada desenvolvida com JavaScript e TensorFlow.js, capaz de classificar perfis em `Premium`, `Medium` ou `Basic` a partir de idade, cor favorita e localização.
