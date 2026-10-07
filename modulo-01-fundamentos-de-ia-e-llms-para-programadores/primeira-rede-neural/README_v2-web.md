@@ -6,11 +6,13 @@
 
 ## Sobre o projeto
 
-Aplicação de classificação supervisionada desenvolvida com JavaScript e TensorFlow.js, capaz de classificar perfis em `Premium`, `Medium` ou `Basic` a partir de idade, cor favorita e localização.
+Experimento de classificação supervisionada com dados sintéticos, desenvolvido para explorar o treinamento e a avaliação de uma rede neural no navegador com TensorFlow.js.
 
-O projeto foi desenvolvido como evolução do primeiro experimento [`v1-console`](./v1-console/), passando de uma implementação executada no console para uma aplicação web completa, com dataset sintético, pré-processamento, treinamento, teste, avaliação e inferência no navegador.
+Aplicação de **classificação supervisionada** desenvolvida com JavaScript e TensorFlow.js, capaz de categorizar perfis em `Premium`, `Medium` ou `Basic` a partir de idade, cor favorita e localização. As categorias são definidas por uma regra de classificação criada especificamente para o experimento, utilizando dados sintéticos.
 
-O objetivo não foi criar um sistema de produção, mas construir uma aplicação pequena o suficiente para compreender, na prática, o ciclo completo de um problema de classificação supervisionada.
+O projeto é a evolução do primeiro experimento [`v1-console`](./v1-console/), passando de uma implementação executada no console para uma aplicação web completa, com **dataset sintético, pré-processamento, treinamento, teste, avaliação e inferência executados no navegador**.
+
+O objetivo não foi criar um sistema de produção, mas construir uma aplicação pequena o suficiente para compreender, na prática, o **ciclo completo de um problema de classificação supervisionada** — desde a preparação dos dados até a avaliação do comportamento da rede neural.
 
 ### Resultado principal
 
