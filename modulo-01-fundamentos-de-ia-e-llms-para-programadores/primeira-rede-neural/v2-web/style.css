@@ -366,7 +366,7 @@ body {
 /* ---------- Resultados do experimento ---------- */
 
 .experiment-results {
-  margin-top: 20px;
+  margin-top: 28px;
 }
 
 .results-details {
@@ -553,7 +553,7 @@ body {
 /* ---------- Footer ---------- */
 
 .footer {
-  margin-top: 40px;
+  margin-top: 28px;
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: 0.75rem;
