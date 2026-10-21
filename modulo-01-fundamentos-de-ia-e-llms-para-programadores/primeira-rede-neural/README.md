@@ -44,18 +44,19 @@ Além da implementação do modelo, o projeto busca investigar como a quantidade
 
 ![Interface do classificador](./v2-web/assets/interface.png)
 
-Após o treinamento, a aplicação disponibiliza alguns perfis que não fazem parte do conjunto de treinamento.
+A aplicação roda diretamente no navegador e permite experimentar o processo de inferência de uma rede neural treinada com dados sintéticos.
 
-O usuário pode selecionar um perfil e visualizar:
+O usuário pode selecionar um dos perfis demonstrativos, que não participaram do treinamento, e visualizar:
 
-- os dados utilizados na previsão;
-- a categoria esperada pela regra sintética;
-- a pontuação calculada pela regra;
-- a categoria prevista pela rede neural;
-- o nível de confiança da previsão;
-- as probabilidades atribuídas às três categorias.
+- Características do perfil: idade, cor favorita e localização.
+- Categoria esperada pela regra: resultado da regra sintética de classificação e pontuação calculada para o perfil.
+- Predição da rede neural: categoria prevista pelo modelo e probabilidade associada à previsão.
+- Distribuição das probabilidades: valores atribuídos pela rede às classes Premium, Medium e Basic.
+- Comparação dos resultados: indicação de concordância ou divergência entre a categoria definida pela regra e a previsão do modelo.
 
-A interface também indica quando a previsão da rede coincide ou diverge da categoria definida pela regra.
+Os resultados detalhados dos experimentos, incluindo a análise dos datasets, a acurácia, os erros de classificação e a matriz de confusão, são exibidos no console do navegador. Para consultá-los, abra as ferramentas de desenvolvedor antes de recarregar a página e expanda os objetos ou arrays que desejar analisar.
+
+Como as categorias são geradas por uma regra sintética, a comparação serve para avaliar se a rede aprendeu os padrões definidos para o experimento.
 
 ## Tecnologias
 

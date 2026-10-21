@@ -363,6 +363,193 @@ body {
   border-top: 1px dashed var(--line);
 }
 
+/* ---------- Resultados do experimento ---------- */
+
+.experiment-results {
+  margin-top: 20px;
+}
+
+.results-details {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.results-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 18px 22px;
+
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  list-style: none;
+}
+
+.results-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.results-details > summary::after {
+  content: '+';
+  color: var(--mint);
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+}
+
+.results-details[open] > summary::after {
+  content: '−';
+}
+
+.results-details > summary:hover {
+  background: var(--panel-raised);
+}
+
+.results-details > summary:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: -3px;
+}
+
+.results-content {
+  padding: 0 22px 22px;
+}
+
+.results-intro,
+.confusion-description {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.results-intro {
+  margin: 0 0 18px;
+}
+
+/* ---------- Cards de métricas ---------- */
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  min-width: 0;
+  padding: 14px;
+
+  background: var(--panel-raised);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.metric-label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.metric-value {
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.metric-card:first-child .metric-value {
+  color: var(--mint);
+}
+
+/* ---------- Matriz de confusão ---------- */
+
+.confusion-section {
+  margin-top: 26px;
+}
+
+.confusion-section h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.confusion-description {
+  margin: 0 0 14px;
+}
+
+.confusion-table-wrapper {
+  overflow-x: auto;
+}
+
+.confusion-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.confusion-matrix th,
+.confusion-matrix td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.confusion-matrix thead th {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.confusion-matrix tbody th {
+  color: var(--text);
+  font-weight: 500;
+  text-align: left;
+}
+
+.confusion-matrix td {
+  color: var(--text-muted);
+}
+
+.confusion-matrix td.is-diagonal {
+  color: var(--mint);
+  font-weight: 600;
+}
+
+.results-note {
+  margin: 18px 0 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .results-content {
+    padding: 0 16px 18px;
+  }
+
+  .results-details > summary {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .metric-value {
+    font-size: 1.25rem;
+  }
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
@@ -370,6 +557,76 @@ body {
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: 0.75rem;
+}
+
+.footer-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 16px;
+  margin-bottom: 20px;
+
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-note-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+
+  border: 1px solid var(--mint);
+  border-radius: 50%;
+
+  color: var(--mint);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.footer-note-title {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.footer-note-content p:last-child {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.footer-note kbd {
+  padding: 2px 5px;
+
+  background: var(--panel-raised);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.footer-credit {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .footer-note {
+    gap: 9px;
+    padding: 12px;
+  }
 }
 
 /* ---------- Reduced motion ---------- */

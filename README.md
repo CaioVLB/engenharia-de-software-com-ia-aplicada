@@ -14,7 +14,7 @@ Uma pós-graduação voltada para **desenvolvedores**, com foco em aplicar IA na
 
 | # | Disciplina | Status |
 |---|---|---|
-| [1](./disciplina-01-fundamentos-ia-llms/) | Fundamentos de IA e LLMs para Programadores | 🔄 Em andamento |
+| [1](./modulo-01-fundamentos-de-ia-e-llms-para-programadores/) | Fundamentos de IA e LLMs para Programadores | 🔄 Em andamento |
 | 2 | APIs de IA Generativa e Prompt Engineering | ⏳ Não iniciado |
 | 3 | MCP — Model Context Protocol | ⏳ Não iniciado |
 | 4 | Criação de Agentes Autônomos | ⏳ Não iniciado |
@@ -30,9 +30,9 @@ Uma pós-graduação voltada para **desenvolvedores**, com foco em aplicar IA na
 
 ## Destaques
 
-- **[Primeira rede neural do zero — v1-console](./disciplina-01-fundamentos-ia-llms/primeira-rede-neural/v1-console/)** — primeiro experimento prático com redes neurais utilizando TensorFlow.js e Node.js. O projeto foi desenvolvido para compreender o ciclo fundamental de **preparação dos dados → vetorização → treinamento → inferência**, explorando normalização, one-hot encoding, arquitetura de camadas densas, ReLU, softmax, Adam e categorical crossentropy.
+- **[Primeira rede neural do zero — v1-console](./modulo-01-fundamentos-de-ia-e-llms-para-programadores/primeira-rede-neural/v1-console/)** — primeiro experimento prático com redes neurais utilizando TensorFlow.js e Node.js. O projeto foi desenvolvido para compreender o ciclo fundamental de **preparação dos dados → vetorização → treinamento → inferência**, explorando normalização, one-hot encoding, arquitetura de camadas densas, ReLU, softmax, Adam e categorical crossentropy.
 
-- **[Classificador de perfis — v2-web](./disciplina-01-fundamentos-ia-llms/primeira-rede-neural/v2-web/)** — evolução do experimento para uma aplicação executada **100% no navegador**, utilizando TensorFlow.js. O projeto amplia o primeiro protótipo com **dataset sintético, separação entre treino e teste, validação dos dados, avaliação por acurácia e matriz de confusão, análise dos erros e interface interativa de inferência**. Nos experimentos, o modelo evoluiu de **36,67% para 80,00% de acurácia** ao aumentar o conjunto de treinamento de 30 para 90 registros, mantendo o mesmo conjunto de 30 registros para teste.
+- **[Classificador de perfis — v2-web](./modulo-01-fundamentos-de-ia-e-llms-para-programadores/primeira-rede-neural/v2-web/)** — evolução do experimento para uma aplicação executada **100% no navegador**, utilizando TensorFlow.js. O projeto amplia o primeiro protótipo com **dataset sintético, separação entre treino e teste, validação dos dados, avaliação por acurácia e matriz de confusão, análise dos erros e interface interativa de inferência**. Nos experimentos, o modelo evoluiu de **36,67% para 80,00% de acurácia** ao aumentar o conjunto de treinamento de 30 para 90 registros, mantendo o mesmo conjunto de 30 registros para teste.
 **[▶ Acessar demo](https://rede-neural-v2.vercel.app/)**
 
 ## Como navegar

@@ -27,6 +27,7 @@ import {
   atualizarProgresso,
   inicializarInterface,
   tratarErro,
+  renderResultadosExperimento,
 } from './js/ui.js';
 
 import { 
@@ -169,6 +170,11 @@ async function main() {
     );
 
     exibirMatrizConfusao(
+      matrizConfusao
+    );
+
+    renderResultadosExperimento(
+      resultadoTeste,
       matrizConfusao
     );
 

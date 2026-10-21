@@ -86,8 +86,97 @@
 
       </section>
 
+      <section class="experiment-results" id="experiment-results" hidden>
+
+        <details class="results-details">
+          <summary>Resultados do experimento</summary>
+
+          <div class="results-content">
+            <p class="results-intro">
+              Confira o desempenho da rede neural no conjunto de teste,
+              com métricas e matriz de confusão.
+            </p>
+
+            <!-- MÉTRICAS PRINCIPAIS -->
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <span class="metric-label">Acurácia</span>
+                <strong class="metric-value" id="metric-accuracy">—</strong>
+              </div>
+
+              <div class="metric-card">
+                <span class="metric-label">Acertos</span>
+                <strong class="metric-value" id="metric-hits">—</strong>
+              </div>
+
+              <div class="metric-card">
+                <span class="metric-label">Erros</span>
+                <strong class="metric-value" id="metric-errors">—</strong>
+              </div>
+
+              <div class="metric-card">
+                <span class="metric-label">Registros de teste</span>
+                <strong class="metric-value" id="metric-total">—</strong>
+              </div>
+            </div>
+
+            <!-- MATRIZ DE CONFUSÃO -->
+            <div class="confusion-section">
+              <h3>Matriz de confusão</h3>
+
+              <p class="confusion-description">
+                As linhas representam a categoria esperada pela regra;
+                as colunas mostram a categoria prevista pela rede neural.
+              </p>
+
+              <div class="confusion-table-wrapper">
+                <table class="confusion-matrix">
+                  <thead>
+                    <tr>
+                      <th scope="col">Categoria esperada</th>
+                      <th scope="col">Basic</th>
+                      <th scope="col">Medium</th>
+                      <th scope="col">Premium</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="confusion-matrix-body"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <p class="results-note">
+              Experimento educacional com dados sintéticos.
+              Os resultados podem variar entre execuções e não representam
+              o desempenho do modelo em dados reais.
+            </p>
+          </div>
+        </details>
+        
+      </section>
+
       <footer class="footer">
-        <p>Disciplina 01 — Fundamentos de IA e LLMs para Programadores · v2 (browser, TensorFlow.js)</p>
+        <div class="footer-note" role="note">
+          <span class="footer-note-icon" aria-hidden="true">i</span>
+
+          <div class="footer-note-content">
+            <p class="footer-note-title">
+              Quer explorar os resultados do experimento?
+            </p>
+
+            <p>
+              Abra o console do navegador (<kbd>F12</kbd>) antes de recarregar
+              a página para visualizar a análise dos datasets, as métricas
+              de avaliação, os erros de classificação e a matriz de confusão.
+              Se um objeto ou array aparecer recolhido, clique na seta
+              ao lado para expandir os detalhes.
+            </p>
+          </div>
+        </div>
+
+        <p class="footer-credit">
+          Disciplina 01 — Fundamentos de IA e LLMs para Programadores · v2 (browser, TensorFlow.js)
+        </p>
       </footer>
 
     </main>

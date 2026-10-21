@@ -64,6 +64,13 @@ const el = {
   cardTier: document.getElementById('card-tier'),
   cardConfidence: document.getElementById('card-confidence'),
   bars: document.getElementById('bars'),
+
+  experimentResults: document.getElementById('experiment-results'),
+  metricAccuracy: document.getElementById('metric-accuracy'),
+  metricHits: document.getElementById('metric-hits'),
+  metricErrors: document.getElementById('metric-errors'),
+  metricTotal: document.getElementById('metric-total'),
+  confusionMatrixBody: document.getElementById('confusion-matrix-body'),
 };
 
 // ================================================================
@@ -232,6 +239,73 @@ export function inicializarInterface(model) {
   el.classifier.hidden = false;
 
   configurarEventos(model);
+}
+
+// ================================================================
+// RESULTADOS DO EXPERIMENTO
+// ================================================================
+export function renderResultadosExperimento(resultadoTeste, matrizConfusao) {
+  // --------------------------------------------------------------
+  // MÉTRICAS
+  // --------------------------------------------------------------
+  el.metricAccuracy.textContent =
+    `${(resultadoTeste.acuracia * 100).toFixed(2)}%`;
+
+  el.metricHits.textContent =
+    resultadoTeste.acertos;
+
+  el.metricErrors.textContent =
+    resultadoTeste.erros;
+
+  el.metricTotal.textContent =
+    resultadoTeste.total;
+
+  // --------------------------------------------------------------
+  // MATRIZ DE CONFUSÃO
+  // --------------------------------------------------------------
+  const categorias = [
+    { chave: 'basic', rotulo: 'Basic' },
+    { chave: 'medium', rotulo: 'Medium' },
+    { chave: 'premium', rotulo: 'Premium' },
+  ];
+
+  el.confusionMatrixBody.innerHTML = categorias
+    .map((categoriaReal, indiceReal) => {
+      const linha =
+        matrizConfusao[categoriaReal.chave] ??
+        matrizConfusao[categoriaReal.rotulo];
+
+      const celulas = categorias
+        .map((categoriaPrevista, indicePrevisto) => {
+          const valor =
+            linha[categoriaPrevista.chave] ??
+            linha[categoriaPrevista.rotulo] ??
+            0;
+
+          const classe =
+            indiceReal === indicePrevisto
+              ? 'is-diagonal'
+              : '';
+
+          return `
+            <td class="${classe}">
+              ${valor}
+            </td>
+          `;
+        })
+        .join('');
+
+      return `
+        <tr>
+          <th scope="row">${categoriaReal.rotulo}</th>
+          ${celulas}
+        </tr>
+      `;
+    })
+    .join('');
+
+  // Exibe a seção depois de preencher os resultados.
+  el.experimentResults.hidden = false;
 }
 
 // ================================================================
