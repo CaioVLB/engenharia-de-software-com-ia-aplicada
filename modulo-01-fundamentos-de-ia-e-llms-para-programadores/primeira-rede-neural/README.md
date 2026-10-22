@@ -54,9 +54,21 @@ O usuário pode selecionar um dos perfis demonstrativos, que não participaram d
 - Distribuição das probabilidades: valores atribuídos pela rede às classes Premium, Medium e Basic.
 - Comparação dos resultados: indicação de concordância ou divergência entre a categoria definida pela regra e a previsão do modelo.
 
-Os resultados detalhados dos experimentos, incluindo a análise dos datasets, a acurácia, os erros de classificação e a matriz de confusão, são exibidos no console do navegador. Para consultá-los, abra as ferramentas de desenvolvedor antes de recarregar a página e expanda os objetos ou arrays que desejar analisar.
+### Resultados do experimento
 
-Como as categorias são geradas por uma regra sintética, a comparação serve para avaliar se a rede aprendeu os padrões definidos para o experimento.
+A interface também possui uma seção expansível com um resumo da avaliação do modelo, permitindo consultar os resultados.
+
+São apresentados:
+
+- Acurácia: percentual de classificações corretas no conjunto de teste.
+
+- Acertos e erros: quantidade de registros classificados corretamente e incorretamente.
+
+- Total de registros avaliados: tamanho do conjunto de teste utilizado na execução.
+
+- Matriz de confusão: distribuição dos acertos e das classificações incorretas entre as três categorias.
+
+Os resultados detalhados dos experimentos, incluindo a análise dos datasets, a acurácia, os erros de classificação e a matriz de confusão, são exibidos no console do navegador. Para consultá-los, abra as ferramentas de desenvolvedor antes de recarregar a página e expanda os objetos ou arrays que desejar analisar.
 
 ## Tecnologias
 
